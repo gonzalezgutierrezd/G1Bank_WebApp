@@ -1,0 +1,2 @@
+#tells git what files to ignore when pushing to the repo
+.venv

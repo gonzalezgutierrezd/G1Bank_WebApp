@@ -1,0 +1,21 @@
+<!-- base template -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content ="width=device-width, initial scale=1.0">
+        <link rel="stylesheet"  type="text/css" href="{{url_for('static', filename='style.css')}}">
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <div class="G1Bank-container">
+            <!-- code for each child template -->
+            {% block content %}
+            {% endblock %}
+            <!-- end code for each child template -->
+        </div>
+    <script src="https://kit.fontawesome.com/2fb99e2bc2.js" crossorigin="anonymous"></script>
+    <!-- <script src="{{ url_for('static', filename='menu.js') }}"></script> --> 
+    <!-- ^^ if we want to use javascript we would call it here just put the right file name in there-->
+    </body>
+</html>
