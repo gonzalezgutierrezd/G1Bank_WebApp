@@ -1,3 +1,4 @@
+#main.py from setup video
 from flask import Flask, redirect, url_for, render_template
 from flask_sqlalchemy import SQLAlchemy
 
