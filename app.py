@@ -13,8 +13,22 @@ print(users)
 def homepage():
     return render_template("homepage.html")
 
-@app.route("/login")
+@app.route("/login", methods=['GET','POST'])
 def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        if username in users and users[username] == password:
+            print(f'Loging in as { username }')
+            return render_template('homepage.html')
+        elif username not in users:
+            print(f'User {username} not found')
+            return render_template("loginfailure.html")
+        elif  users[username] != password:
+            print('Incorrect password.')
+            return render_template("loginfailure.html")
+        else:
+            print('Login failed.')
     return render_template("login.html")
 
 @app.route("/register", methods=['GET','POST'])
@@ -29,7 +43,7 @@ def register():
             users[username] = request.form['password']
             print(f'user {username} created')
             print(users)
-            return render_template('homepage.html')
+            return render_template('login.html')
     else:
         return render_template('register.html')
 
