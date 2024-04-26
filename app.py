@@ -50,23 +50,25 @@ def register():
 
 @app.route("/deposit")
 def deposit():
-    return render_template("deposit.html")
-
-@app.route("/withdraw")
-def withdraw():
+    """
     ## sample of how this could be used
-    
-    bankInstance = Bank('Eli')
+    # make instance
+    bankInstance = Bank('userName')
     print(bankInstance.show_details())
-
     #deposite to bank instance
     print(bankInstance.deposit(1000))
     print(bankInstance.show_details())
-
     #withdraw from bank instance
     print(bankInstance.withdraw(100))
     print(bankInstance.show_details())
+    """
+    return render_template("deposit.html")
+
+
+@app.route("/withdraw")
+def withdraw():
     
+
     return render_template("withdraw.html")
     
 
