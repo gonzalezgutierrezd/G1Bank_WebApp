@@ -5,6 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from __init__ import app,db
 #from .models import Item
 # ^^from .models import [Class_Name]
+from functions import Bank
 
 users = {}
 print(users)
@@ -53,7 +54,23 @@ def deposit():
 
 @app.route("/withdraw")
 def withdraw():
+    ## sample of how this could be used
+    
+    bankInstance = Bank('Eli')
+    print(bankInstance.show_details())
+
+    #deposite to bank instance
+    print(bankInstance.deposit(1000))
+    print(bankInstance.show_details())
+
+    #withdraw from bank instance
+    print(bankInstance.withdraw(100))
+    print(bankInstance.show_details())
+    
     return render_template("withdraw.html")
+    
+
 
 if __name__ == "__main__":
     app.run(debug=True)
+
