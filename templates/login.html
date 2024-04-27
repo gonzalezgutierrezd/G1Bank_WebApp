@@ -5,19 +5,76 @@
 <hr>
 <div class="container">
     <!-- this form based on a template from https://getbootstrap.com/docs/5.3/forms -->
+    <div class="center">
     <form action='/login' method='POST'>
+        <h2>G1 Bank</h2>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Username</label>
             <input type="text" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div class="form-text">Enter a username.</div>
+            <div class="form-text">Enter your username.</div>
         </div>
-        
+            
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
             <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+            <div class="form-text">Enter your password.</div>
         </div>
-        
+            
+        <div class="mb-3">
         <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        </div>
     </form>
 </div>
+<style>
+    .mb-3{
+        margin: auto;
+        /*border: 3px solid yellow;*/
+    }
+    .mb-3 button, label, input, h2{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        /*border: 3px solid orange;*/
+    }
+    .mb-3 label{
+        width: 350px;
+    }
+    .mb-3 input{
+        width: 350px;
+    }
+
+    .container{
+        height: 100%;
+        min-height: 400px;
+        position: relative;
+        /*border: 3px solid green;*/
+    }
+    .container h2{
+        position: relative;
+        text-align: center;
+    }
+    .container .center{
+        position: absolute;
+        top: 40%;
+        transform: translate(0, -50%);
+    }
+    .center{
+        width: 100%;
+        left: 0;
+        /*border: 3px solid red;*/
+    }
+
+    .form-text{
+        position: relative;
+        width: 350px;
+        left: 50%;
+        transform: translate(-50%);
+        /*border: 3px solid blue;*/
+    }
+    html, body {
+        height: 85%;
+        margin: 0;
+    }
+</style>
 {% endblock %}
