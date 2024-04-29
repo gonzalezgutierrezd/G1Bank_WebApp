@@ -1,0 +1,22 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+<table>
+  <thead>
+    <tr>
+      <th>Transaction ID</th>
+      <th>Date</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for transaction in accountV.transactions %}
+    <tr>
+      <td>{{ transaction.id }}</td>
+      <td>{{ transaction.date }}</td>
+      <td>{{ transaction.amount }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
