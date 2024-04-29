@@ -1,1 +1,93 @@
 /* CSS goes here*/ 
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-img-container{
+    padding-top: 20px;
+}
+.hero-img-container>img{
+    width: 500px;
+}
+
+.hero-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.hero-text-container>h1{
+    font-size: 70px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-text-container>p{
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-text-container>button{
+    padding: 12px 28px;
+    border: none;
+    outline-width: 0;
+    color: white;
+    border-radius: 24px;
+    cursor: pointer;
+    font-weight: 400;
+    background-color: #444CAF;
+}
+
+.body-container{
+    background-color: #DDE5ED;
+}
+
+.why-us{
+    padding-top: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+
+.why-us>h1{
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.why-us>p{
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.features-section{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.feature-item>img{
+    width: 65px;
+    margin-bottom: 10px;
+}
+
+.feature-item>h1{
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    /* margin-right: 10px; */
+}
+
+.feature-item>p{
+    margin-bottom: 15px;
+    font-weight: 700;
+}
